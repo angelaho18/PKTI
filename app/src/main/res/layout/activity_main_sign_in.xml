@@ -60,7 +60,6 @@
             android:layout_marginTop="0.5dp"
             android:layout_marginLeft="33dp"
             android:textColor="@color/grey"
-
             />
     </LinearLayout>
     <LinearLayout
@@ -76,7 +75,7 @@
             android:hint="@string/full_name"
             android:paddingLeft="25dp"
             android:background="@drawable/edittext"
-            />
+            android:inputType="textCapCharacters"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -86,7 +85,7 @@
             android:hint="@string/password"
             android:paddingLeft="25dp"
             android:background="@drawable/password"
-            />
+            android:inputType="textPassword"/>
     </LinearLayout>
 
     <LinearLayout

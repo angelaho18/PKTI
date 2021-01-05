@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PKTI">
-        <activity android:name=".MainProfileActivity" />
-        <activity android:name=".MainActivitySignIn" />
-        <activity android:name=".MainActivity">
+         <activity android:name=".MainActivitySearch" />
+         <activity android:name=".MainProfileActivity" />
+         <activity android:name=".MainActivitySignIn" />
+        <activity android:name=".MainActivitySignUp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

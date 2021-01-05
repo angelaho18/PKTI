@@ -7,8 +7,7 @@
         android:bottomRightRadius="20px"
         android:topRightRadius="20px"
     />
-    <solid
-        android:color="@color/white" />
+    <solid android:color="@color/white"/>
     <size android:height="37px"
         android:width="112px"/>
 </shape>

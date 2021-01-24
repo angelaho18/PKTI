@@ -41,8 +41,10 @@
             android:label="@string/title_activity_gallery_page"
             android:parentActivityName=".MainActivity"
             android:theme="@style/Theme.PKTI.NoActionBar" />
+        <activity android:name=".MainActivitySearch" />
+        <activity android:name=".MainProfileActivity" />
         <activity android:name=".MainActivitySignIn" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivitySignUp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

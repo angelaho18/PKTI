@@ -66,6 +66,15 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation "androidx.recyclerview:recyclerview-selection:1.1.0-rc03"
     implementation 'com.squareup.picasso:picasso:2.71828'   //picasso
+//    implementation 'com.android.support:design:28.+'
+//    implementation 'com.google.android.gms:play-services-places-compact:17.0.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.libraries.places:places:2.4.0'
+    implementation 'com.google.android.gms:play-services-location:17.1.0'
+    implementation 'com.google.android.gms:play-services-places:17.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation "androidx.recyclerview:recyclerview-selection:1.1.0-rc03"
+    implementation 'com.squareup.picasso:picasso:2.71828'   //picasso
     implementation 'com.makeramen:roundedimageview:2.3.0'   //RoundedImageView
     implementation "androidx.cardview:cardview:1.0.0"
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'//cardView

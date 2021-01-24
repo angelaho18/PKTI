@@ -133,7 +133,6 @@
             android:textSize="18sp"
             android:textColor="@color/white"
             android:background="@drawable/signup_button"
-            android:onClick="showGal"
         />
         <android.widget.Button
             android:layout_width="match_parent"

@@ -10,5 +10,6 @@
     <color name="Purple_Base">#B87FF8</color>
     <color name="grey">#979292</color>
     <color name="purple_button">#C17ACF</color>
-
+    <color name="primary_gray">#F5F5F5</color>
+    <color name="light_gray">#F9F9F9</color>
 </resources>

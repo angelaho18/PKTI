@@ -9,6 +9,14 @@ class MainActivityCart : AppCompatActivity() {
     private lateinit var Myadapter : AdapterCart
     private var ItemProduk : MutableList<produk> = mutableListOf(
             produk("Dress",200000,"https://i.ibb.co/wBYDxLq/beach.jpg"),
+            produk("Dress",200000,"https://i.ibb.co/wBYDxLq/beach.jpg"),
+            produk("Dress",200000,"https://i.ibb.co/wBYDxLq/beach.jpg"),
+            produk("Dress",200000,"https://i.ibb.co/wBYDxLq/beach.jpg"),
+            produk("Dress",200000,"https://i.ibb.co/wBYDxLq/beach.jpg"),
+            produk("Dress",200000,"https://i.ibb.co/wBYDxLq/beach.jpg"),
+            produk("Dress",200000,"https://i.ibb.co/wBYDxLq/beach.jpg"),
+            produk("Dress",200000,"https://i.ibb.co/wBYDxLq/beach.jpg"),
+            produk("Dress",200000,"https://i.ibb.co/wBYDxLq/beach.jpg"),
             produk("Batik",100000, "https://i.ibb.co/dBCHzXQ/paris.jpg")
     )
     override fun onCreate(savedInstanceState: Bundle?) {

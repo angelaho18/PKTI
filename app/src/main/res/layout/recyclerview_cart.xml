@@ -20,6 +20,7 @@
             android:layout_marginLeft="25dp"/>
 
         <TextView
+            android:id="@+id/NamaToko"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="NamaToko"
@@ -111,12 +112,14 @@
                     android:background="@drawable/cart_button_stroke">
 
                     <android.widget.Button
+                        android:id="@+id/removeList"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:background="@color/transparent"
                         android:minWidth="0.5dp"
                         android:minHeight="0.5dp"
-                        android:text="-" />
+                        android:text="―"
+                        android:clickable="true"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -126,12 +129,14 @@
                         android:textColor="@color/black" />
 
                     <android.widget.Button
+                        android:id="@+id/addList"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:background="@color/transparent"
                         android:minWidth="0.5dp"
                         android:minHeight="0.5dp"
-                        android:text="+" />
+                        android:text="+"
+                        android:clickable="true"/>
 
                 </LinearLayout>
 

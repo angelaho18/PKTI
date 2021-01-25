@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
+import org.w3c.dom.Text
 
 class AdapterCart(data : MutableList<produk>): RecyclerView.Adapter<AdapterCart.myHolder>() {
     private var myData = data
@@ -15,6 +16,7 @@ class AdapterCart(data : MutableList<produk>): RecyclerView.Adapter<AdapterCart.
         val GambarProduk = itemView.findViewById<ImageView>(R.id.GambarProduk)
         val NamaProduk = itemView.findViewById<TextView>(R.id.NamaProduk)
         val Harga = itemView.findViewById<TextView>(R.id.harga)
+        val NamaToko = itemView.findViewById<TextView>(R.id.NamaToko)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): myHolder {
@@ -27,6 +29,7 @@ class AdapterCart(data : MutableList<produk>): RecyclerView.Adapter<AdapterCart.
 
     override fun onBindViewHolder(holder: myHolder, position: Int) {
 
+        holder.NamaToko.setText(myData.get(position).NamaToko)
         holder.NamaProduk.setText(myData.get(position).NamaProduk)
         holder.Harga.setText(myData.get(position).Harga.toString())
         Picasso.get().load(myData.get(position).GambarProduk).into(holder.GambarProduk)

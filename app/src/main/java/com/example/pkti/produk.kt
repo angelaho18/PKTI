@@ -1,4 +1,4 @@
 package com.example.pkti
 
-data class produk(var NamaProduk : String, var Harga : Int, var GambarProduk : String) {
+data class produk(var NamaToko : String, var NamaProduk : String, var Harga : Int, var GambarProduk : String) {
 }

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:paddingLeft="@dimen/layout_padding"
+    android:paddingRight="@dimen/layout_padding"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".GalleryPage"
+    tools:showIn="@layout/activity_gallery_page">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/profilePic"
+            android:layout_width="@dimen/profile_pic_size"
+            android:layout_height="@dimen/profile_pic_size"
+            android:contentDescription="Designer profile picture"
+            android:paddingLeft="20dp"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/profilePic"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/profilePic"
+                android:text="desaigner_name"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name"
+                android:layout_toEndOf="@+id/profilePic"
+                android:drawableLeft="@drawable/ic_location"
+                android:text=" Jl. blablabla, Medan\n Sumatera Utara" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/toggleGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profilePic"
+            android:layout_centerInParent="true"
+            android:background="@drawable/button_group"
+            android:orientation="horizontal"
+            app:singleSelection="true"
+            android:clipChildren="true">
+
+            <Button
+                android:id="@+id/btnAndroid"
+                style="?attr/borderlessButtonStyle"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:text="Call"
+                android:textColor="@color/purple_button"
+                app:icon="@android:drawable/sym_action_call"
+                app:iconGravity="textStart"
+                app:iconTint="@color/purple_button"
+                android:background="?selectableItemBackgroundBorderless"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@color/black" />
+
+            <Button
+                android:id="@+id/btniOS"
+                style="?attr/borderlessButtonStyle"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:text="Chat"
+                android:textColor="@color/purple_button"
+                app:icon="@android:drawable/sym_action_chat"
+                app:iconGravity="textStart"
+                app:iconTint="@color/purple_button"
+                android:background="?selectableItemBackgroundBorderless"/>
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toggleGroup"
+            android:layout_marginLeft="-10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="-10dp"
+            android:background="@drawable/rounded_gray_background"
+            android:paddingTop="15dp">
+
+            <TableLayout
+                android:id="@+id/data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TableRow android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/totalDesign"
+                        android:layout_width="@dimen/data_view_size"
+                        android:layout_height="@dimen/data_view_size"
+                        android:background="@drawable/view_data_effect"
+                        android:gravity="center"
+                        android:lines="2" />
+
+                    <TextView
+                        android:id="@+id/rate"
+                        android:layout_width="@dimen/data_view_size"
+                        android:layout_height="@dimen/data_view_size"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/view_data_effect"
+                        android:drawableTop="@drawable/ic_round_star"
+                        android:gravity="center"
+                        android:padding="22dp"
+                        android:text="4.5"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/totalOrder"
+                        android:layout_width="@dimen/data_view_size"
+                        android:layout_height="@dimen/data_view_size"
+                        android:background="@drawable/view_data_effect"
+                        android:gravity="center"
+                        android:lines="2" />
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/collectionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/data"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="Collection"
+                android:textSize="25sp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/galleryRecycleView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/collectionText"
+                android:padding="10dp"
+                android:overScrollMode="never"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/galleryRecycleView"
+                android:layout_margin="@dimen/text_margin"
+                android:text="@string/large_text" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

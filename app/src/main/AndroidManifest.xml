@@ -35,11 +35,11 @@
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivitySignUp" />
         <activity
             android:name=".GalleryPage"
             android:label="@string/title_activity_gallery_page"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".MainActivitySignUp"
             android:theme="@style/Theme.PKTI.NoActionBar" />
         <activity android:name=".MainActivitySearch" />
         <activity android:name=".MainProfileActivity" />

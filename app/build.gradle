@@ -5,13 +5,13 @@ plugins {
 }
 
 android {
-    compileSdkVersion 28
-    buildToolsVersion "28.0.2"
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
 
     defaultConfig {
         applicationId "com.example.pkti"
         minSdkVersion 24
-        targetSdkVersion 28
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
@@ -66,6 +66,9 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation "androidx.recyclerview:recyclerview-selection:1.1.0-rc03"
     implementation 'com.squareup.picasso:picasso:2.71828'   //picasso
+    implementation 'com.makeramen:roundedimageview:2.3.0'   //RoundedImageView
+    implementation "androidx.cardview:cardview:1.0.0"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'//cardView
 //    implementation 'com.android.support:design:28.+'
 //    implementation 'com.google.android.gms:play-services-places-compact:17.0.0'
     implementation 'com.google.android.gms:play-services-maps:17.0.0'

@@ -139,10 +139,10 @@
             android:layout_marginTop="48dp"
             android:layout_marginLeft="33dp"
             android:layout_marginRight="33dp"
-            android:text="Sign Up"
+            android:text="Sign In"
             android:textSize="18sp"
             android:textColor="@color/white"
-            android:background="@drawable/signup_button"
+            android:background="@drawable/radius"
             />
         <android.widget.Button
             android:layout_width="match_parent"

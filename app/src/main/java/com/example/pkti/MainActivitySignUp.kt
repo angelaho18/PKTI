@@ -14,6 +14,11 @@ class MainActivitySignUp : AppCompatActivity() {
             val intent_signin = Intent(this, MainActivitySignIn::class.java)
             startActivity(intent_signin)
         }
+        signup.setOnClickListener {
+            val intent_Signup = Intent(this, MainActivityRole::class.java)
+            startActivity(intent_Signup)
+        }
+
     }
 
     fun showGal(view: View) {

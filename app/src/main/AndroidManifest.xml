@@ -40,7 +40,18 @@
         <activity android:name=".MainActivitySearch" />
         <activity android:name=".MainProfileActivity" />
         <activity android:name=".MainActivitySignIn" />
-        <activity android:name=".MainActivitySignUp">
+        <activity android:name=".MainActivitySignUp" />
+<!--        <activity android:name=".MainActivityList"></activity>-->
+        <!-- <activity android:name=".MainActivityHome"></activity> -->
+        <!-- <activity android:name=".MainProfileActivity" /> -->
+        <!-- <activity android:name=".MainActivitySignIn" /> -->
+        <!-- <activity android:name=".MainActivity"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <activity android:name=".MainActivityList">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -15,6 +15,7 @@
         android:layout_marginTop="10dp">
 
         <ImageButton
+            android:id="@+id/previewBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/ic_arrow___left_3"
@@ -27,8 +28,9 @@
             android:textSize="40sp"
             android:textStyle="bold"
             android:textColor="@color/purple_200"
-            android:layout_marginLeft="140dp"
-            android:text="Cart"/>
+            android:text="Cart"
+            android:textAlignment="center"
+            android:layout_marginRight="30dp"/>
 
     </LinearLayout>
 
@@ -59,14 +61,16 @@
             android:orientation="horizontal"
             android:paddingTop="15dp"
             android:paddingBottom="15dp"
-            android:layout_gravity="end">
+            android:layout_gravity="end"
+            android:weightSum="5">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_marginLeft="20dp"
-                android:layout_gravity="center_vertical">
+                android:layout_gravity="center_vertical"
+                android:layout_weight="4.5">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -101,7 +105,6 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="230dp"
                 android:text="Checkout"
                 android:textColor="@color/white"
                 android:background="@drawable/cart_checkout_button"

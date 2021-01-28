@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.activity_product_preview.*
 import kotlinx.android.synthetic.main.gallery_item.*
 import kotlinx.android.synthetic.main.gallery_item.view.*
 
@@ -20,6 +21,10 @@ class ProductPreview : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_product_preview)
+
+        previewBack.setOnClickListener{
+            this.finish()
+        }
 
         var preview = findViewById<LinearLayout>(R.id.previewTemp)
 

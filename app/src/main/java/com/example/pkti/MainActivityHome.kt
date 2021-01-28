@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.LinearLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main_home.*
+import kotlinx.android.synthetic.main.navigation_button.*
 
 class MainActivityHome : AppCompatActivity() {
     private lateinit var MyAdapter : StoryAdapter
@@ -41,6 +42,8 @@ class MainActivityHome : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_home)
+        bottomNavigationView.background = null
+        bottomNavigationView.menu.getItem(2).isEnabled = false
         MyAdapter = StoryAdapter(MyStory)
         recyclerStory.adapter = MyAdapter
         recyclerStory.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)

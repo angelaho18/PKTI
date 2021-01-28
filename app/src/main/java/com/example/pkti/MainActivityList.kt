@@ -32,8 +32,8 @@ class MainActivityList : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_list)
 
-//        bottomNavigationView.background = null
-//        bottomNavigationView.menu.getItem(2).isEnabled = false
+        bottomNavigationView.background = null
+        bottomNavigationView.menu.getItem(2).isEnabled = false
 
         MyListAdapter = ListDesignerAdapter(MyList)
         recyclerList.adapter = MyListAdapter

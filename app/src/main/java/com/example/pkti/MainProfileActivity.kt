@@ -7,6 +7,7 @@ import androidx.appcompat.app.ActionBar
 import androidx.core.view.get
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main_profile.*
+import kotlinx.android.synthetic.main.navigation_button.*
 
 class MainProfileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

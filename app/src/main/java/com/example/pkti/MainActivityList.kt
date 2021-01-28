@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main_home.*
 import kotlinx.android.synthetic.main.activity_main_home.recyclerMain
 import kotlinx.android.synthetic.main.activity_main_list.*
+import kotlinx.android.synthetic.main.navigation_button.*
 
 class MainActivityList : AppCompatActivity() {
 
@@ -30,6 +31,9 @@ class MainActivityList : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_list)
+
+//        bottomNavigationView.background = null
+//        bottomNavigationView.menu.getItem(2).isEnabled = false
 
         MyListAdapter = ListDesignerAdapter(MyList)
         recyclerList.adapter = MyListAdapter

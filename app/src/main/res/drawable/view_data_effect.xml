@@ -8,7 +8,7 @@
                 android:right="@dimen/drop_shadow1"
                 android:top="@dimen/drop_shadow1" />
             <solid android:color="#02CDBCBC" />
-            <corners android:radius="8dp" />
+            <corners android:radius="20dp" />
         </shape>
     </item>
     <item>
@@ -19,7 +19,7 @@
                 android:right="@dimen/drop_shadow1"
                 android:top="@dimen/drop_shadow1" />
             <solid android:color="#05CDBCBC" />
-            <corners android:radius="8dp" />
+            <corners android:radius="20dp" />
         </shape>
     </item>
     <item>
@@ -30,7 +30,7 @@
                 android:right="@dimen/drop_shadow1"
                 android:top="@dimen/drop_shadow1" />
             <solid android:color="#10CDBCBC" />
-            <corners android:radius="8dp" />
+            <corners android:radius="20dp" />
         </shape>
     </item>
     <item>
@@ -41,7 +41,7 @@
                 android:right="@dimen/drop_shadow1"
                 android:top="@dimen/drop_shadow1" />
             <solid android:color="#15CDBCBC" />
-            <corners android:radius="8dp" />
+            <corners android:radius="20dp" />
         </shape>
     </item>
     <item>
@@ -52,7 +52,7 @@
                 android:right="@dimen/drop_shadow1"
                 android:top="@dimen/drop_shadow1" />
             <solid android:color="#20CDBCBC" />
-            <corners android:radius="8dp" />
+            <corners android:radius="20dp" />
         </shape>
     </item>
     <item>
@@ -63,7 +63,7 @@
                 android:right="@dimen/drop_shadow2"
                 android:top="@dimen/drop_shadow2" />
             <solid android:color="#25CDBCBC" />
-            <corners android:radius="8dp" />
+            <corners android:radius="20dp" />
         </shape>
     </item>
     <item>
@@ -74,7 +74,7 @@
                 android:right="@dimen/drop_shadow2"
                 android:top="@dimen/drop_shadow2" />
             <solid android:color="#30CDBCBC" />
-            <corners android:radius="8dp" />
+            <corners android:radius="20dp" />
         </shape>
     </item>
 
@@ -82,7 +82,7 @@
     <item>
         <shape>
             <solid android:color="#FFFFFF" />
-            <corners android:radius="8dp" />
+            <corners android:radius="20dp" />
         </shape>
     </item>
 </layer-list>

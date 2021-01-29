@@ -8,18 +8,12 @@
     android:background="@drawable/bg"
     android:orientation="vertical">
 
-    <LinearLayout
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="10dp">
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/ic_arrow___left_3"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="25dp"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -27,10 +21,10 @@
             android:textSize="40sp"
             android:textStyle="bold"
             android:textColor="@color/purple_200"
-            android:layout_marginLeft="140dp"
-            android:text="Cart"/>
+            android:gravity="center"
+            android:text="Cart" />
 
-    </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -26,14 +26,6 @@
         android:id="@+id/recyclerList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-<<<<<<< HEAD
-        android:layout_marginTop="90dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"/>
-    <include layout="@layout/navigation_button"/>
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
-=======
         android:layout_marginTop="30dp"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-</LinearLayout>
->>>>>>> 2b86c13d84b258557d17a652837f2d5b30316848

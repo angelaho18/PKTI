@@ -58,5 +58,4 @@
     <!--        app:layout_anchor="@id/app_bar"-->
     <!--        app:layout_anchorGravity="bottom|end"-->
     <!--        app:srcCompat="@android:drawable/ic_dialog_email" />-->
-    <include layout="@layout/navigation_button"/>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -59,6 +59,10 @@ class MainActivityHome : AppCompatActivity() {
         recyclerMain.adapter = MyFeedAdapter
         recyclerMain.layoutManager = LinearLayoutManager(this)
 
+        bottomNavigationView?.selectedItemId = R.id.home1
+
+
+
         bottomNavigationView.setOnNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.person ->{

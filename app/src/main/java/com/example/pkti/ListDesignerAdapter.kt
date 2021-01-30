@@ -1,5 +1,6 @@
 package com.example.pkti
 
+import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -34,6 +35,18 @@ class ListDesignerAdapter (data : MutableList<ListDesigner>) : RecyclerView.Adap
         Picasso.get().load(myData.get(position).gambar1).into(holder.Pic1)
         Picasso.get().load(myData.get(position).gambar2).into(holder.Pic2)
         Picasso.get().load(myData.get(position).gambar3).into(holder.Pic3)
+
+        holder.Pic1.setOnClickListener {
+            val konteks1 = holder.Pic1.context
+            val intentproduk1 = Intent(konteks1,ProductPreview::class.java)
+            konteks1.startActivity(intentproduk1)
+        }
+
+        holder.Username.setOnClickListener{
+            val konten = holder.Username.context
+            val intentkonten = Intent(konten,GalleryPage::class.java)
+            konten.startActivity(intentkonten)
+        }
 
     }
 

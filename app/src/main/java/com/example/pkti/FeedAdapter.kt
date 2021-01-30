@@ -42,10 +42,16 @@ class FeedAdapter (data : MutableList<Feed>) : RecyclerView.Adapter<FeedAdapter.
 
         Log.i("HOME", myData.get(position).gambar)
 
-        holder.itemView.setOnClickListener {
+        holder.Pic.setOnClickListener {
             val konteks = holder.Pic.context
             val intentproduk = Intent(konteks,ProductPreview::class.java)
             konteks.startActivity(intentproduk)
+        }
+
+        holder.Username.setOnClickListener{
+            val konten = holder.Username.context
+            val intentkonten = Intent(konten,GalleryPage::class.java)
+            konten.startActivity(intentkonten)
         }
 
     }

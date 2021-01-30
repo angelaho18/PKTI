@@ -18,6 +18,8 @@ class MainProfileActivity : AppCompatActivity() {
         bottomNavigationView.background = null
         bottomNavigationView.menu.getItem(2).isEnabled = false
 
+        bottomNavigationView?.selectedItemId = R.id.person
+
         bottomNavigationView.setOnNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.list -> {

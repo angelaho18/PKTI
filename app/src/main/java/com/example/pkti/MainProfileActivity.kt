@@ -18,6 +18,13 @@ class MainProfileActivity : AppCompatActivity() {
         bottomNavigationView.background = null
         bottomNavigationView.menu.getItem(2).isEnabled = false
 
+        bottomNavigationView?.selectedItemId = R.id.person
+
+        fab.setOnClickListener{
+            val intendong = Intent(this,MainActivityCart::class.java)
+            startActivity(intendong)
+        }
+
         bottomNavigationView.setOnNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.list -> {

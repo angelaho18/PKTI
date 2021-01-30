@@ -1,9 +1,12 @@
 package com.example.pkti
 
 import android.content.Intent
+import android.graphics.Rect
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
+import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.activity_main_home.*
 import kotlinx.android.synthetic.main.activity_main_home.recyclerMain
 import kotlinx.android.synthetic.main.activity_main_list.*
@@ -118,8 +121,19 @@ class MainActivityList : AppCompatActivity() {
         recyclerList.adapter = MyListAdapter
         recyclerList.layoutManager = LinearLayoutManager(this)
 
+        bottomNavigationView?.selectedItemId = R.id.list
+
+        fab.setOnClickListener{
+            val intendong = Intent(this,MainActivityCart::class.java)
+            startActivity(intendong)
+        }
+
          bottomNavigationView.setOnNavigationItemSelectedListener {
             when (it.itemId) {
+                R.id.list ->{
+                    val intentlist = Intent(this,MainActivityList::class.java)
+                    startActivity(intentlist)
+                }
                 R.id.person -> {
                     val intentperson = Intent(this, MainProfileActivity::class.java)
                     startActivity(intentperson)
@@ -135,5 +149,6 @@ class MainActivityList : AppCompatActivity() {
             }
             true
         }
+
     }
 }

@@ -32,8 +32,6 @@ class GalleryPage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gallery_page)
-        bottomNavigationView.background = null
-        bottomNavigationView.menu.getItem(2).isEnabled = false
 
         setSupportActionBar(findViewById(R.id.toolbar))
         toolbar.setNavigationIcon(R.drawable.ic_arrow_back)
@@ -88,6 +86,5 @@ class GalleryPage : AppCompatActivity() {
         Gallery.add(Image("https://i.ibb.co/wc9rSgw/desserts.jpg", "Desserts Table"))
         Gallery.add(Image("https://i.ibb.co/wdrdpKC/kitten.jpg", "Kitten"))
     }
-
 
 }

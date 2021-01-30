@@ -59,6 +59,13 @@ class MainActivityHome : AppCompatActivity() {
         recyclerMain.adapter = MyFeedAdapter
         recyclerMain.layoutManager = LinearLayoutManager(this)
 
+        bottomNavigationView?.selectedItemId = R.id.home1
+
+        fab.setOnClickListener{
+            val intendong = Intent(this,MainActivityCart::class.java)
+            startActivity(intendong)
+        }
+
         bottomNavigationView.setOnNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.person ->{

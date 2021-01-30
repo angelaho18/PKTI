@@ -12,7 +12,7 @@ class MainActivityRole : AppCompatActivity() {
         setContentView(R.layout.activity_main_role)
 
         desainer.setOnClickListener{
-            val desainer = Intent(this,GalleryPage::class.java)
+            val desainer = Intent(this,MainActivityHome::class.java)
             startActivity(desainer)
         }
         customer.setOnClickListener{

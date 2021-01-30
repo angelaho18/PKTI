@@ -9,27 +9,17 @@ import android.widget.Toast
 import java.lang.Exception
 
 class SplashScreen : AppCompatActivity() {
+    private val timeout_splash = 3000L
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
-        var Timer: Thread = Thread(){
-            fun run(){
-                try{
-                    sleep(3000)
-                    var homeIntent = Intent(this, MainActivitySignUp::class.java)
-                    startActivity(homeIntent)
-                    Toast.makeText(this, "START", Toast.LENGTH_LONG).show()
-                }catch (e: Exception){
-                    e.printStackTrace()
-                    Toast.makeText(this, "ERROR", Toast.LENGTH_LONG).show()
-                }finally {
-                    Toast.makeText(this, "FIN", Toast.LENGTH_LONG).show()
-                }
-            }
-        }
-        Timer.start()
 
+        Handler().postDelayed(
+            {
+                var homeIntent = Intent(this, MainActivitySignUp::class.java)
+                startActivity(homeIntent)
+                Toast.makeText(this, "Welcome to Busan", Toast.LENGTH_LONG).show()
+                finish()
+            }, timeout_splash)
     }
-
-
 }

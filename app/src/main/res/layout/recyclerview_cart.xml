@@ -94,7 +94,8 @@
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    android:textColor="@color/purple_200"/>
+                    android:textColor="@color/purple_200"
+                    android:text="-"/>
 
             </LinearLayout>
 

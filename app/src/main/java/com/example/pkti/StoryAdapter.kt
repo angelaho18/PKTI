@@ -1,5 +1,6 @@
 package com.example.pkti
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -20,6 +21,12 @@ class StoryAdapter (data : MutableList<Story>) : RecyclerView.Adapter<StoryAdapt
 
     override fun onBindViewHolder(holder: StoryHolder, position: Int) {
         holder.Username.setText(myData.get(position).NamaStory)
+
+        holder.itemView.setOnClickListener{
+            val konten = holder.Username.context
+            val intentkonten = Intent(konten,GalleryPage::class.java)
+            konten.startActivity(intentkonten)
+        }
     }
 
     override fun getItemCount(): Int = myData.size

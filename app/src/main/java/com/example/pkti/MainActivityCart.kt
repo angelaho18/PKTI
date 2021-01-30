@@ -9,6 +9,7 @@ import kotlinx.android.synthetic.main.activity_main_cart.*
 //import kotlinx.android.synthetic.main.activity_main_cart.previewBack
 import kotlinx.android.synthetic.main.activity_product_preview.*
 import kotlinx.android.synthetic.main.recyclerview_cart.*
+import kotlinx.android.synthetic.main.navigation_button.*
 import kotlin.properties.Delegates
 
 class MainActivityCart : AppCompatActivity() {
@@ -34,6 +35,12 @@ class MainActivityCart : AppCompatActivity() {
         bar.setNavigationOnClickListener(View.OnClickListener {
             this.finish()
         })
+
+//        bottomNavigationView?.menu?.findItem(R.id.person)?.isChecked = false
+//        bottomNavigationView?.menu?.findItem(R.id.home1)?.isChecked = false
+//        bottomNavigationView?.menu?.findItem(R.id.list)?.isChecked = false
+//        bottomNavigationView?.menu?.findItem(R.id.map)?.isChecked = false
+
         Myadapter = AdapterCart(ItemProduk)
         RecyclerViewCart.adapter=Myadapter
         RecyclerViewCart.layoutManager=LinearLayoutManager(this)

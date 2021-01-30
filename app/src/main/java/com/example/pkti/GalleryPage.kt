@@ -1,8 +1,10 @@
 package com.example.pkti
 
+import android.content.Intent
 import android.graphics.BitmapShader
 import android.graphics.Color
 import android.graphics.Shader
+import android.net.Uri
 import android.os.Bundle
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
@@ -64,6 +66,12 @@ class GalleryPage : AppCompatActivity() {
         findViewById<TextView>(tvId).setText(spanString)
     }
 
+    fun call(view: View) {
+        var dialIntent = Intent(Intent.ACTION_DIAL)
+        dialIntent.data = Uri.parse("tel: " + "08123456789")
+        startActivity(dialIntent)
+    }
+
     private fun loadImages(){
         Gallery.add(Image("https://i.ibb.co/wBYDxLq/beach.jpg", "Beach Houses"))
         Gallery.add(Image("https://i.ibb.co/wBYDxLq/beach.jpg", "Beach Houses"))
@@ -76,5 +84,6 @@ class GalleryPage : AppCompatActivity() {
         Gallery.add(Image("https://i.ibb.co/wc9rSgw/desserts.jpg", "Desserts Table"))
         Gallery.add(Image("https://i.ibb.co/wdrdpKC/kitten.jpg", "Kitten"))
     }
+
 
 }

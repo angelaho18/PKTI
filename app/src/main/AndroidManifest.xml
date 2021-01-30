@@ -3,6 +3,9 @@
     package="com.example.pkti">
     <!-- google -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />-->
 
     <application
         android:allowBackup="true"
@@ -11,8 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PKTI">
-        <activity android:name=".ProductPreview"></activity>
-        <activity android:name=".TestActivity" />
+<!--        <activity android:name=".ProductPreview"></activity>-->
+<!--        <activity android:name=".MapsActivity" />-->
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -28,15 +31,15 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <activity
-            android:name=".MapsActivity"
-            android:label="@string/title_activity_maps"
-            android:parentActivityName=".MainActivitySignUp" />
-        <activity
-            android:name=".GalleryPage"
-            android:label="@string/title_activity_gallery_page"
-            android:parentActivityName=".MainActivitySignUp"
-            android:theme="@style/Theme.PKTI.NoActionBar" />
+<!--        <activity-->
+<!--            android:name=".MainActivityList"-->
+<!--            android:label="@string/title_activity_maps"-->
+<!--            android:parentActivityName=".MapsActivity" />-->
+<!--        <activity-->
+<!--            android:name=".GalleryPage"-->
+<!--            android:label="@string/title_activity_gallery_page"-->
+<!--            android:parentActivityName=".MainActivitySignUp"-->
+<!--            android:theme="@style/Theme.PKTI.NoActionBar" />-->
         <activity android:name=".MainActivitySearch" />
         <activity android:name=".MainProfileActivity" />
         <activity android:name=".MainActivitySignIn" />
@@ -51,7 +54,7 @@
         <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
         <!-- </intent-filter> -->
         <!-- </activity> -->
-        <activity android:name=".MainActivityList">
+        <activity android:name=".ProductPreview">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

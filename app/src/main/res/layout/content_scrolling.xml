@@ -78,7 +78,7 @@
             android:layout_marginBottom="10dp">
 
             <Button
-                android:id="@+id/btnAndroid"
+                android:id="@+id/btnCall"
                 style="?attr/borderlessButtonStyle"
                 android:layout_width="150dp"
                 android:layout_height="60dp"
@@ -88,7 +88,8 @@
                 app:icon="@android:drawable/sym_action_call"
                 app:iconGravity="textStart"
                 app:iconTint="@color/purple_button"
-                android:background="?selectableItemBackgroundBorderless"/>
+                android:background="?selectableItemBackgroundBorderless"
+                android:onClick="call"/>
 
             <View
                 android:layout_width="1dp"
@@ -97,7 +98,7 @@
                 android:background="@color/black" />
 
             <Button
-                android:id="@+id/btniOS"
+                android:id="@+id/btnChat"
                 style="?attr/borderlessButtonStyle"
                 android:layout_width="150dp"
                 android:layout_height="60dp"

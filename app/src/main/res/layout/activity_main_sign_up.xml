@@ -143,11 +143,14 @@
             android:layout_marginLeft="33dp"
             android:layout_marginRight="33dp"
             android:text="CONTINUE WITH GOOGLE"
-            android:paddingLeft="15dp"
             android:textSize="18sp"
+            android:gravity="center"
             android:textColor="@color/Purple_Base"
             android:background="@drawable/signup_button_google"
-            />
+            android:drawableStart="@drawable/ic_google"
+            android:drawablePadding="0dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="37dp"/>
     </LinearLayout>
 
 </LinearLayout>

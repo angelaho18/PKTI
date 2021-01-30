@@ -20,7 +20,7 @@ class MainActivitySignIn : AppCompatActivity() {
             startActivity(intentSignin)
         }
         findViewById<android.widget.Button>(R.id.google).setOnClickListener { view ->
-            Snackbar.make(view, "Google Cannot Access", Snackbar.LENGTH_LONG)
+            Snackbar.make(view, "Sorry Google is not Available Now", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
        }
 

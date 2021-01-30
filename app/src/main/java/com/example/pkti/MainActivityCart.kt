@@ -26,10 +26,6 @@ class MainActivityCart : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_cart)
-
-        previewBack.setOnClickListener{
-            this.finish()
-        }
         setSupportActionBar(findViewById(R.id.bar))
         bar.setNavigationIcon(R.drawable.ic_arrow_back)
         bar.setNavigationOnClickListener(View.OnClickListener {

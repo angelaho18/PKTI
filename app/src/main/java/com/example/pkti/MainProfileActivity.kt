@@ -17,5 +17,24 @@ class MainProfileActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main_profile)
         bottomNavigationView.background = null
         bottomNavigationView.menu.getItem(2).isEnabled = false
+
+        bottomNavigationView.setOnNavigationItemSelectedListener {
+            when (it.itemId) {
+                R.id.list -> {
+                    val intentlist = Intent(this, MainActivityList::class.java)
+                    startActivity(intentlist)
+                }
+                R.id.home1 -> {
+                    val intenthome = Intent(this, MainActivityHome::class.java)
+                    startActivity(intenthome)
+                }
+                R.id.map -> {
+                    val intentmap = Intent(this, MapsActivity::class.java)
+                    startActivity(intentmap)
+                }
+            }
+            true
+        }
+
     }
 }

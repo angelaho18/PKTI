@@ -1,5 +1,6 @@
 package com.example.pkti
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -10,22 +11,100 @@ import kotlinx.android.synthetic.main.navigation_button.*
 
 class MainActivityList : AppCompatActivity() {
 
-    private lateinit var MyListAdapter : ListDesignerAdapter
+    private lateinit var MyListAdapter: ListDesignerAdapter
 
-    private var MyList : MutableList<ListDesigner> = mutableListOf(
-            ListDesigner("Ana", "Fashion Designer", "https://i.ibb.co/dBCHzXQ/paris.jpg", "https://i.ibb.co/wBYDxLq/beach.jpg", "https://i.ibb.co/dBCHzXQ/paris.jpg"),
-            ListDesigner("Ana", "Fashion Designer", "https://i.ibb.co/dBCHzXQ/paris.jpg", "https://i.ibb.co/wBYDxLq/beach.jpg", "https://i.ibb.co/dBCHzXQ/paris.jpg"),
-            ListDesigner("Ana", "Fashion Designer", "https://i.ibb.co/dBCHzXQ/paris.jpg", "https://i.ibb.co/wBYDxLq/beach.jpg", "https://i.ibb.co/dBCHzXQ/paris.jpg"),
-            ListDesigner("Ana", "Fashion Designer", "https://i.ibb.co/dBCHzXQ/paris.jpg", "https://i.ibb.co/wBYDxLq/beach.jpg", "https://i.ibb.co/dBCHzXQ/paris.jpg"),
-            ListDesigner("Ana", "Fashion Designer", "https://i.ibb.co/dBCHzXQ/paris.jpg", "https://i.ibb.co/wBYDxLq/beach.jpg", "https://i.ibb.co/dBCHzXQ/paris.jpg"),
-            ListDesigner("Ana", "Fashion Designer", "https://i.ibb.co/dBCHzXQ/paris.jpg", "https://i.ibb.co/wBYDxLq/beach.jpg", "https://i.ibb.co/dBCHzXQ/paris.jpg"),
-            ListDesigner("Ana", "Fashion Designer", "https://i.ibb.co/dBCHzXQ/paris.jpg", "https://i.ibb.co/wBYDxLq/beach.jpg", "https://i.ibb.co/dBCHzXQ/paris.jpg"),
-            ListDesigner("Ana", "Fashion Designer", "https://i.ibb.co/dBCHzXQ/paris.jpg", "https://i.ibb.co/wBYDxLq/beach.jpg", "https://i.ibb.co/dBCHzXQ/paris.jpg"),
-            ListDesigner("Ana", "Fashion Designer", "https://i.ibb.co/dBCHzXQ/paris.jpg", "https://i.ibb.co/wBYDxLq/beach.jpg", "https://i.ibb.co/dBCHzXQ/paris.jpg"),
-            ListDesigner("Ana", "Fashion Designer", "https://i.ibb.co/dBCHzXQ/paris.jpg", "https://i.ibb.co/wBYDxLq/beach.jpg", "https://i.ibb.co/dBCHzXQ/paris.jpg"),
-            ListDesigner("Ana", "Fashion Designer", "https://i.ibb.co/dBCHzXQ/paris.jpg", "https://i.ibb.co/wBYDxLq/beach.jpg", "https://i.ibb.co/dBCHzXQ/paris.jpg"),
-            ListDesigner("Ana", "Fashion Designer", "https://i.ibb.co/dBCHzXQ/paris.jpg", "https://i.ibb.co/wBYDxLq/beach.jpg", "https://i.ibb.co/dBCHzXQ/paris.jpg"),
-            ListDesigner("Ana", "Fashion Designer", "https://i.ibb.co/dBCHzXQ/paris.jpg", "https://i.ibb.co/wBYDxLq/beach.jpg", "https://i.ibb.co/dBCHzXQ/paris.jpg")
+    private var MyList: MutableList<ListDesigner> = mutableListOf(
+        ListDesigner(
+            "Ana",
+            "Fashion Designer",
+            "https://i.ibb.co/dBCHzXQ/paris.jpg",
+            "https://i.ibb.co/wBYDxLq/beach.jpg",
+            "https://i.ibb.co/dBCHzXQ/paris.jpg"
+        ),
+        ListDesigner(
+            "Ana",
+            "Fashion Designer",
+            "https://i.ibb.co/dBCHzXQ/paris.jpg",
+            "https://i.ibb.co/wBYDxLq/beach.jpg",
+            "https://i.ibb.co/dBCHzXQ/paris.jpg"
+        ),
+        ListDesigner(
+            "Ana",
+            "Fashion Designer",
+            "https://i.ibb.co/dBCHzXQ/paris.jpg",
+            "https://i.ibb.co/wBYDxLq/beach.jpg",
+            "https://i.ibb.co/dBCHzXQ/paris.jpg"
+        ),
+        ListDesigner(
+            "Ana",
+            "Fashion Designer",
+            "https://i.ibb.co/dBCHzXQ/paris.jpg",
+            "https://i.ibb.co/wBYDxLq/beach.jpg",
+            "https://i.ibb.co/dBCHzXQ/paris.jpg"
+        ),
+        ListDesigner(
+            "Ana",
+            "Fashion Designer",
+            "https://i.ibb.co/dBCHzXQ/paris.jpg",
+            "https://i.ibb.co/wBYDxLq/beach.jpg",
+            "https://i.ibb.co/dBCHzXQ/paris.jpg"
+        ),
+        ListDesigner(
+            "Ana",
+            "Fashion Designer",
+            "https://i.ibb.co/dBCHzXQ/paris.jpg",
+            "https://i.ibb.co/wBYDxLq/beach.jpg",
+            "https://i.ibb.co/dBCHzXQ/paris.jpg"
+        ),
+        ListDesigner(
+            "Ana",
+            "Fashion Designer",
+            "https://i.ibb.co/dBCHzXQ/paris.jpg",
+            "https://i.ibb.co/wBYDxLq/beach.jpg",
+            "https://i.ibb.co/dBCHzXQ/paris.jpg"
+        ),
+        ListDesigner(
+            "Ana",
+            "Fashion Designer",
+            "https://i.ibb.co/dBCHzXQ/paris.jpg",
+            "https://i.ibb.co/wBYDxLq/beach.jpg",
+            "https://i.ibb.co/dBCHzXQ/paris.jpg"
+        ),
+        ListDesigner(
+            "Ana",
+            "Fashion Designer",
+            "https://i.ibb.co/dBCHzXQ/paris.jpg",
+            "https://i.ibb.co/wBYDxLq/beach.jpg",
+            "https://i.ibb.co/dBCHzXQ/paris.jpg"
+        ),
+        ListDesigner(
+            "Ana",
+            "Fashion Designer",
+            "https://i.ibb.co/dBCHzXQ/paris.jpg",
+            "https://i.ibb.co/wBYDxLq/beach.jpg",
+            "https://i.ibb.co/dBCHzXQ/paris.jpg"
+        ),
+        ListDesigner(
+            "Ana",
+            "Fashion Designer",
+            "https://i.ibb.co/dBCHzXQ/paris.jpg",
+            "https://i.ibb.co/wBYDxLq/beach.jpg",
+            "https://i.ibb.co/dBCHzXQ/paris.jpg"
+        ),
+        ListDesigner(
+            "Ana",
+            "Fashion Designer",
+            "https://i.ibb.co/dBCHzXQ/paris.jpg",
+            "https://i.ibb.co/wBYDxLq/beach.jpg",
+            "https://i.ibb.co/dBCHzXQ/paris.jpg"
+        ),
+        ListDesigner(
+            "Ana",
+            "Fashion Designer",
+            "https://i.ibb.co/dBCHzXQ/paris.jpg",
+            "https://i.ibb.co/wBYDxLq/beach.jpg",
+            "https://i.ibb.co/dBCHzXQ/paris.jpg"
+        )
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,5 +117,23 @@ class MainActivityList : AppCompatActivity() {
         MyListAdapter = ListDesignerAdapter(MyList)
         recyclerList.adapter = MyListAdapter
         recyclerList.layoutManager = LinearLayoutManager(this)
+
+         bottomNavigationView.setOnNavigationItemSelectedListener {
+            when (it.itemId) {
+                R.id.person -> {
+                    val intentperson = Intent(this, MainProfileActivity::class.java)
+                    startActivity(intentperson)
+                }
+                R.id.home1 -> {
+                    val intenthome = Intent(this, MainActivityHome::class.java)
+                    startActivity(intenthome)
+                }
+                R.id.map -> {
+                    val intentmap = Intent(this, MapsActivity::class.java)
+                    startActivity(intentmap)
+                }
+            }
+            true
+        }
     }
 }

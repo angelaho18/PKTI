@@ -27,27 +27,28 @@
             android:value="@string/google_maps_key" />
         <meta-data
             android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" /> <!-- <activity -->
-        <!-- android:name=".MapsActivity" -->
-        <!-- android:label="@string/title_activity_maps" -->
-<!--         android:parentActivityName=".MainActivitySignUp" /> -->
+            android:value="@integer/google_play_services_version" />
+         <activity
+         android:name=".MapsActivity"
+         android:label="@string/title_activity_maps"
+         android:parentActivityName=".MainActivitySignUp" />
         <activity
             android:name=".GalleryPage"
             android:label="@string/title_activity_gallery_page"
             android:parentActivityName=".MainActivitySignUp"
             android:theme="@style/Theme.PKTI.NoActionBar" />
         <activity android:name=".MainActivitySearch" />
-<!--        <activity android:name=".MainProfileActivity" />-->
+        <activity android:name=".MainProfileActivity" />
         <activity android:name=".MainActivitySignIn" />
-        <activity android:name=".MainActivitySignUp" />
-<!--        <activity android:name=".MainActivityList" />-->
+<!--        <activity android:name=".MainActivitySignUp" />-->
+        <activity android:name=".MainActivityList" />
         <activity android:name=".MainActivityHome" />
         <activity android:name=".MainActivityRole" /> <!-- <intent-filter> -->
         <!-- <action android:name="android.intent.action.MAIN" /> -->
         <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
         <!-- </intent-filter> -->
         <!-- </activity> -->
-        <activity android:name=".MainActivityCart">
+        <activity android:name=".MainActivitySignUp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

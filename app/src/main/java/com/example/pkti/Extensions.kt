@@ -8,3 +8,5 @@ import androidx.annotation.LayoutRes
 fun ViewGroup.inflate(@LayoutRes layoutRes: Int, attachRoot: Boolean = false): View {
     return LayoutInflater.from(context).inflate(layoutRes, this, attachRoot)
 }
+
+

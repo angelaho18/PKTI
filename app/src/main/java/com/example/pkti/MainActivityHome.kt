@@ -7,6 +7,7 @@ import android.view.ActionMode
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main_home.*
 import kotlinx.android.synthetic.main.activity_main_sign_in.*
@@ -57,6 +58,25 @@ class MainActivityHome : AppCompatActivity() {
         MyFeedAdapter = FeedAdapter(MyFeed)
         recyclerMain.adapter = MyFeedAdapter
         recyclerMain.layoutManager = LinearLayoutManager(this)
+
+        bottomNavigationView.setOnNavigationItemSelectedListener {
+            when(it.itemId){
+                R.id.person ->{
+                    val intentperson = Intent(this,MainProfileActivity::class.java)
+                    startActivity(intentperson)
+                }
+                R.id.list ->{
+                    val intentlist = Intent(this,MainActivityList::class.java)
+                    startActivity(intentlist)
+                }
+                R.id.map ->{
+                    val intentmap = Intent(this,MapsActivity::class.java)
+                    startActivity(intentmap)
+                }
+            }
+            true
+        }
+
     }
 
 }

@@ -34,6 +34,7 @@ import com.google.android.libraries.places.widget.listener.PlaceSelectionListene
 import com.google.android.libraries.places.widget.model.AutocompleteActivityMode
 import com.google.android.material.shape.MarkerEdgeTreatment
 import kotlinx.android.synthetic.main.activity_maps.*
+import kotlinx.android.synthetic.main.navigation_button.*
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
 
@@ -50,6 +51,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_maps)
+        bottomNavigationView.background = null
+        bottomNavigationView.menu.getItem(2).isEnabled = false
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         val mapFragment = supportFragmentManager
             .findFragmentById(R.id.map) as SupportMapFragment
@@ -72,6 +75,25 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
         linearLayoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         mapRecyclerView.layoutManager = linearLayoutManager
         mapRecyclerView.adapter = NearbyAdapter()
+
+
+        bottomNavigationView.setOnNavigationItemSelectedListener{
+            when (it.itemId) {
+                R.id.person -> {
+                    val intentperson = Intent(this, MainProfileActivity::class.java)
+                    startActivity(intentperson)
+                }
+                R.id.list -> {
+                    val intentlist = Intent(this, MainActivityList::class.java)
+                    startActivity(intentlist)
+                }
+                R.id.map -> {
+                    val intentmap = Intent(this, MapsActivity::class.java)
+                    startActivity(intentmap)
+                }
+            }
+            true
+        }
 
     }
 
@@ -180,6 +202,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
         mMap.addMarker(MarkerOptions().position(place).title("$text"))
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(place, 12f))
     }
+
+
 
     companion object {
         private val TAG = MapsActivity::class.java.simpleName

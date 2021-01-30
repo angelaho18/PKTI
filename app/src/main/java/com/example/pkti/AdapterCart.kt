@@ -8,6 +8,7 @@ import android.system.Os.remove
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
@@ -26,6 +27,7 @@ class AdapterCart(data : MutableList<Produk>): RecyclerView.Adapter<AdapterCart.
         val Remove = itemView.findViewById<android.widget.Button>(R.id.removeList)
         val ItemCount = itemView.findViewById<TextView>(R.id.itemCount)
         val Total = itemView.findViewById<TextView>(R.id.totalPrice)
+        val Delete = itemView.findViewById<ImageButton>(R.id.deleteItem)
 
         fun bindTotal(item: Produk){
             var count = ItemCount.text.toString().toInt()
@@ -41,28 +43,31 @@ class AdapterCart(data : MutableList<Produk>): RecyclerView.Adapter<AdapterCart.
         
         fun counter(item: Produk, index: Int){
             var count = ItemCount.text.toString().toInt()
+            var dialog = AlertDialog.Builder(itemView.context)
+                .setTitle("Delete Product")
+                .setMessage("Are you sure to remove this product from your cart?")
+                .setPositiveButton("YES, SURE", DialogInterface.OnClickListener { dialog, which ->
+                    removeItem(index)
+                    Toast.makeText(itemView.context, "REMOVE", Toast.LENGTH_SHORT).show()
+                })
+                .setNegativeButton("CANCEL", DialogInterface.OnClickListener { dialog, which ->
+                    return@OnClickListener
+                })
             Add.setOnClickListener {
                 count++
                 ItemCount.text = count.toString()
             }
             Remove.setOnClickListener() {
                 if(count == 1) {
-                    var dialog = AlertDialog.Builder(itemView.context)
-                        .setTitle("Delete Product")
-                        .setMessage("Are you sure to remove this product from your cart?")
-                        .setPositiveButton("YES, SURE", DialogInterface.OnClickListener { dialog, which ->
-                            removeItem(index)
-                            Toast.makeText(itemView.context, "REMOVE", Toast.LENGTH_SHORT).show()
-                        })
-                        .setNegativeButton("CANCEL", DialogInterface.OnClickListener { dialog, which ->
-                            return@OnClickListener
-                        })
                     dialog.show()
                     return@setOnClickListener
                 }
                 count--
                 ItemCount.text = count.toString()
                 item.JumlahProduk = ItemCount.text.toString().toInt()
+            }
+            Delete.setOnClickListener {
+                dialog.show()
             }
         }
     }

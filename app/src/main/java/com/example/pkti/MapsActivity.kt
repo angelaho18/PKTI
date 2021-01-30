@@ -76,6 +76,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
         mapRecyclerView.layoutManager = linearLayoutManager
         mapRecyclerView.adapter = NearbyAdapter()
 
+        bottomNavigationView?.selectedItemId = R.id.map
+
 
         bottomNavigationView.setOnNavigationItemSelectedListener{
             when (it.itemId) {

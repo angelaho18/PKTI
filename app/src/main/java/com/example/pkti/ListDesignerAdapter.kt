@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
@@ -20,6 +21,7 @@ class ListDesignerAdapter (data : MutableList<ListDesigner>) : RecyclerView.Adap
         val Pic1 = view.findViewById<ImageView>(R.id.ListGambar1)
         val Pic2 = view.findViewById<ImageView>(R.id.ListGambar2)
         val Pic3 = view.findViewById<ImageView>(R.id.ListGambar3)
+        val penampung = view.findViewById<LinearLayout>(R.id.penampung)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListHolder {
@@ -42,8 +44,20 @@ class ListDesignerAdapter (data : MutableList<ListDesigner>) : RecyclerView.Adap
             konteks1.startActivity(intentproduk1)
         }
 
-        holder.Username.setOnClickListener{
-            val konten = holder.Username.context
+        holder.Pic2.setOnClickListener {
+            val konteks2 = holder.Pic1.context
+            val intentproduk1 = Intent(konteks2,ProductPreview::class.java)
+            konteks2.startActivity(intentproduk1)
+        }
+
+        holder.Pic3.setOnClickListener {
+            val konteks3 = holder.Pic3.context
+            val intentproduk1 = Intent(konteks3,ProductPreview::class.java)
+            konteks3.startActivity(intentproduk1)
+        }
+
+        holder.penampung.setOnClickListener{
+            val konten = holder.penampung.context
             val intentkonten = Intent(konten,GalleryPage::class.java)
             konten.startActivity(intentkonten)
         }

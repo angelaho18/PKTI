@@ -30,7 +30,11 @@ class MainActivityCart : AppCompatActivity() {
         previewBack.setOnClickListener{
             this.finish()
         }
-
+        setSupportActionBar(findViewById(R.id.bar))
+        bar.setNavigationIcon(R.drawable.ic_arrow_back)
+        bar.setNavigationOnClickListener(View.OnClickListener {
+            this.finish()
+        })
         Myadapter = AdapterCart(ItemProduk)
         RecyclerViewCart.adapter=Myadapter
         RecyclerViewCart.layoutManager=LinearLayoutManager(this)

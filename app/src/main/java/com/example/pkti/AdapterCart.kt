@@ -15,9 +15,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import org.w3c.dom.Text
 
-class AdapterCart(data : MutableList<produk>): RecyclerView.Adapter<AdapterCart.myHolder>() {
+class AdapterCart(data : MutableList<Produk>): RecyclerView.Adapter<AdapterCart.myHolder>() {
     private var myData = data
-    inner class myHolder(val itemView: View): RecyclerView.ViewHolder(itemView){
+    inner class myHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         val GambarProduk = itemView.findViewById<ImageView>(R.id.GambarProduk)
         val NamaProduk = itemView.findViewById<TextView>(R.id.NamaProduk)
         val Harga = itemView.findViewById<TextView>(R.id.harga)
@@ -25,8 +25,21 @@ class AdapterCart(data : MutableList<produk>): RecyclerView.Adapter<AdapterCart.
         val Add = itemView.findViewById<android.widget.Button>(R.id.addList)
         val Remove = itemView.findViewById<android.widget.Button>(R.id.removeList)
         val ItemCount = itemView.findViewById<TextView>(R.id.itemCount)
+        val Total = itemView.findViewById<TextView>(R.id.totalPrice)
 
-        fun counter(item: produk, index: Int){
+        fun bindTotal(item: Produk){
+            var count = ItemCount.text.toString().toInt()
+            var total = 0
+            var price = 0
+            for (i in myData){
+                price  = i.Harga
+                total += (price * item.JumlahProduk)
+            }
+//            Toast.makeText(itemView.context, "count $count price $price total $total", Toast.LENGTH_LONG).show()
+//            Total.text = total.toString()
+        }
+        
+        fun counter(item: Produk, index: Int){
             var count = ItemCount.text.toString().toInt()
             Add.setOnClickListener {
                 count++
@@ -49,6 +62,7 @@ class AdapterCart(data : MutableList<produk>): RecyclerView.Adapter<AdapterCart.
                 }
                 count--
                 ItemCount.text = count.toString()
+                item.JumlahProduk = ItemCount.text.toString().toInt()
             }
         }
     }
@@ -60,11 +74,13 @@ class AdapterCart(data : MutableList<produk>): RecyclerView.Adapter<AdapterCart.
     }
 
     override fun onBindViewHolder(holder: myHolder, position: Int) {
-        holder.NamaToko.setText(myData.get(position).NamaToko)
-        holder.NamaProduk.setText(myData.get(position).NamaProduk)
-        holder.Harga.setText(myData.get(position).Harga.toString())
-        Picasso.get().load(myData.get(position).GambarProduk).into(holder.GambarProduk)
-        holder.counter(myData[position], position)
+        var getPos = myData[position]
+        holder.NamaToko.text = getPos.NamaToko
+        holder.NamaProduk.text = getPos.NamaProduk
+        holder.Harga.text = getPos.Harga.toString()
+        Picasso.get().load(getPos.GambarProduk).into(holder.GambarProduk)
+        holder.counter(getPos, position)
+        holder.bindTotal(getPos)
     }
 
     override fun getItemCount(): Int = myData.size
@@ -72,6 +88,11 @@ class AdapterCart(data : MutableList<produk>): RecyclerView.Adapter<AdapterCart.
     fun removeItem(pos: Int){
         myData.removeAt(pos)
         notifyItemRemoved(pos)
+    }
+
+    fun updateItem(pos: Int, text: Produk){
+        myData.set(pos, text)
+        notifyItemChanged(pos)
     }
 
 }

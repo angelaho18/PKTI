@@ -11,17 +11,17 @@ import kotlinx.android.synthetic.main.activity_product_preview.*
 
 class MainActivityCart : AppCompatActivity() {
     private lateinit var Myadapter : AdapterCart
-    private var ItemProduk : MutableList<produk> = mutableListOf(
-            produk("Ani Shop", "Dress",200000,"https://i.ibb.co/wBYDxLq/beach.jpg"),
-            produk("Ani Shop","Dress",200000,"https://i.ibb.co/wBYDxLq/beach.jpg"),
-            produk("Ani Shop","Dress",200000,"https://i.ibb.co/wBYDxLq/beach.jpg"),
-            produk("Ani Shop","Dress",200000,"https://i.ibb.co/wBYDxLq/beach.jpg"),
-            produk("Ani Shop","Dress",200000,"https://i.ibb.co/wBYDxLq/beach.jpg"),
-            produk("Ani Shop","Dress",200000,"https://i.ibb.co/wBYDxLq/beach.jpg"),
-            produk("Ani Shop","Dress",200000,"https://i.ibb.co/wBYDxLq/beach.jpg"),
-            produk("Ani Shop","Dress",200000,"https://i.ibb.co/wBYDxLq/beach.jpg"),
-            produk("Ani Shop","Dress",200000,"https://i.ibb.co/wBYDxLq/beach.jpg"),
-            produk("Ani Shop","Batik",100000, "https://i.ibb.co/dBCHzXQ/paris.jpg")
+    private var ItemProduk : MutableList<Produk> = mutableListOf(
+            Produk("Ani Shop", "Dress",200000,"https://i.ibb.co/wBYDxLq/beach.jpg"),
+            Produk("Ani Shop","Dress",200000,"https://i.ibb.co/wBYDxLq/beach.jpg"),
+            Produk("Ani Shop","Dress",200000,"https://i.ibb.co/wBYDxLq/beach.jpg"),
+            Produk("Ani Shop","Dress",200000,"https://i.ibb.co/wBYDxLq/beach.jpg"),
+            Produk("Ani Shop","Dress",200000,"https://i.ibb.co/wBYDxLq/beach.jpg"),
+            Produk("Ani Shop","Dress",200000,"https://i.ibb.co/wBYDxLq/beach.jpg"),
+            Produk("Ani Shop","Dress",200000,"https://i.ibb.co/wBYDxLq/beach.jpg"),
+            Produk("Ani Shop","Dress",200000,"https://i.ibb.co/wBYDxLq/beach.jpg"),
+            Produk("Ani Shop","Dress",200000,"https://i.ibb.co/wBYDxLq/beach.jpg"),
+            Produk("Ani Shop","Batik",100000, "https://i.ibb.co/dBCHzXQ/paris.jpg")
     )
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,4 +35,6 @@ class MainActivityCart : AppCompatActivity() {
         RecyclerViewCart.adapter=Myadapter
         RecyclerViewCart.layoutManager=LinearLayoutManager(this)
     }
+
+
 }

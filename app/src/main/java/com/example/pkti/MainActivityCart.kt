@@ -8,6 +8,7 @@ import kotlinx.android.synthetic.main.activity_gallery_page.*
 import kotlinx.android.synthetic.main.activity_main_cart.*
 //import kotlinx.android.synthetic.main.activity_main_cart.previewBack
 import kotlinx.android.synthetic.main.activity_product_preview.*
+import kotlinx.android.synthetic.main.recyclerview_cart.*
 import kotlinx.android.synthetic.main.navigation_button.*
 
 class MainActivityCart : AppCompatActivity() {
@@ -41,6 +42,7 @@ class MainActivityCart : AppCompatActivity() {
         Myadapter = AdapterCart(ItemProduk)
         RecyclerViewCart.adapter=Myadapter
         RecyclerViewCart.layoutManager=LinearLayoutManager(this)
+
     }
 
 

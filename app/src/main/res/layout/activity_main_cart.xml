@@ -15,7 +15,8 @@
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         android:textAlignment="center"
         android:paddingRight="10dp"
-        android:paddingLeft="10dp">
+        android:paddingLeft="10dp"
+        android:background="@color/white">
 
         <TextView
             android:layout_width="wrap_content"
@@ -43,8 +44,6 @@
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
             android:layout_weight="1">
-
-
 
         </androidx.recyclerview.widget.RecyclerView>
 

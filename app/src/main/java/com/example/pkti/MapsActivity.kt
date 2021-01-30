@@ -78,6 +78,10 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
 
         bottomNavigationView?.selectedItemId = R.id.map
 
+        fab.setOnClickListener{
+            val intendong = Intent(this,MainActivityCart::class.java)
+            startActivity(intendong)
+        }
 
         bottomNavigationView.setOnNavigationItemSelectedListener{
             when (it.itemId) {

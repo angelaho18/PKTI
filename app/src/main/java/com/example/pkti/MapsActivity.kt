@@ -34,6 +34,7 @@ import com.google.android.libraries.places.widget.listener.PlaceSelectionListene
 import com.google.android.libraries.places.widget.model.AutocompleteActivityMode
 import com.google.android.material.shape.MarkerEdgeTreatment
 import kotlinx.android.synthetic.main.activity_maps.*
+import kotlinx.android.synthetic.main.navigation_button.*
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
 

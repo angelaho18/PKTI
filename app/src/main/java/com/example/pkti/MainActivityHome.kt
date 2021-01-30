@@ -61,7 +61,10 @@ class MainActivityHome : AppCompatActivity() {
 
         bottomNavigationView?.selectedItemId = R.id.home1
 
-
+        fab.setOnClickListener{
+            val intendong = Intent(this,MainActivityCart::class.java)
+            startActivity(intendong)
+        }
 
         bottomNavigationView.setOnNavigationItemSelectedListener {
             when(it.itemId){

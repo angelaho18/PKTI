@@ -91,28 +91,3 @@ class ProductPreview : AppCompatActivity() {
 
 
 }
-
-
-//                object : com.squareup.picasso.Target{
-//                    override fun onBitmapLoaded(bitmap: Bitmap?, from: Picasso.LoadedFrom?) {
-//                        var url: URL = URL("${image.ImageUrl}")
-//                        var bitmap: Bitmap = BitmapFactory.decodeStream(url.openConnection().getInputStream())
-//                        prevBack.background = BitmapDrawable(resources, bitmap)
-//                    }
-//                    override fun onBitmapFailed(e: Exception?, errorDrawable: Drawable?) {
-//                        Toast.makeText(this@ProductPreview, "hula", Toast.LENGTH_SHORT).show()
-//                    }
-//                    override fun onPrepareLoad(placeHolderDrawable: Drawable?) {
-//                        Toast.makeText(this@ProductPreview, "hula", Toast.LENGTH_SHORT).show()
-//                    }
-//                }
-//                try{
-//                    var url: URL = URL("${image.ImageUrl}")
-//                    var bitmap: Bitmap = BitmapFactory.decodeStream(url.openConnection().getInputStream())
-//                    var bg: Drawable = BitmapDrawable(resources, bitmap)
-//                    prevBack.background = bg
-//
-//                }catch (e: Exception){
-//                    e.printStackTrace()
-//                    Toast.makeText(this, "hula", Toast.LENGTH_SHORT).show()
-//                }

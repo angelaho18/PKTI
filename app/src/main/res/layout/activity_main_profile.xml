@@ -4,187 +4,171 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainProfileActivity"
-    android:background="@drawable/bg">
+    android:background="@drawable/bg"
+    tools:context=".MainProfileActivity">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                >
+                android:layout_marginLeft="30dp">
+
                 <ImageView
                     android:layout_width="150dp"
                     android:layout_height="150dp"
-                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="100dp"
-                    android:src="@drawable/ic_person"
-                    android:background="@drawable/camera_profile" />
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/camera_profile"
+                    android:src="@drawable/ic_person" />
 
-                <Button
+                <android.widget.Button
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:layout_marginTop="125dp"
                     android:layout_marginLeft="-51dp"
+                    android:layout_marginTop="125dp"
+                    android:background="@drawable/button_camera"
                     android:drawableRight="@drawable/camera24"
-                    android:paddingRight="12dp"
-                    android:background="@drawable/button_camera" />
+                    android:paddingRight="12dp" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:orientation="vertical">
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:errorEnabled="true"
                     app:boxStrokeWidth="0dp"
-                    app:boxStrokeWidthFocused="0dp">
+                    app:boxStrokeWidthFocused="0dp"
+                    app:errorEnabled="true">
+
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Name"
-                        android:inputType="text"
-                        android:background="@drawable/profile_text"
                         android:layout_marginLeft="33dp"
                         android:layout_marginRight="33dp"
-                        />
+                        android:background="@drawable/profile_text"
+                        android:hint="Name"
+                        android:inputType="text" />
                 </com.google.android.material.textfield.TextInputLayout>
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:errorEnabled="true"
                     app:boxStrokeWidth="0dp"
-                    app:boxStrokeWidthFocused="0dp">
+                    app:boxStrokeWidthFocused="0dp"
+                    app:errorEnabled="true">
+
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Email"
-                        android:inputType="textEmailAddress"
-                        android:background="@drawable/profile_text"
                         android:layout_marginLeft="33dp"
                         android:layout_marginRight="33dp"
-                        />
+                        android:background="@drawable/profile_text"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress" />
                 </com.google.android.material.textfield.TextInputLayout>
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/kata_sandi"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:errorEnabled="true"
                     app:boxStrokeWidth="0dp"
-                    app:boxStrokeWidthFocused="0dp">
+                    app:boxStrokeWidthFocused="0dp"
+                    app:errorEnabled="true">
+
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Kata Sandi"
-                        android:inputType="textPassword"
-                        android:background="@drawable/profile_text"
                         android:layout_marginLeft="33dp"
                         android:layout_marginRight="33dp"
-                        />
+                        android:background="@drawable/profile_text"
+                        android:hint="Kata Sandi"
+                        android:inputType="textPassword" />
                 </com.google.android.material.textfield.TextInputLayout>
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/no_hp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:errorEnabled="true"
                     app:boxStrokeWidth="0dp"
-                    app:boxStrokeWidthFocused="0dp">
+                    app:boxStrokeWidthFocused="0dp"
+                    app:errorEnabled="true">
+
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="No Handphone"
-                        android:inputType="number"
-                        android:background="@drawable/profile_text"
                         android:layout_marginLeft="33dp"
                         android:layout_marginRight="33dp"
-                        />
+                        android:background="@drawable/profile_text"
+                        android:hint="No Handphone"
+                        android:inputType="number" />
                 </com.google.android.material.textfield.TextInputLayout>
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/Alamat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:errorEnabled="true"
                     app:boxStrokeWidth="0dp"
-                    app:boxStrokeWidthFocused="0dp">
+                    app:boxStrokeWidthFocused="0dp"
+                    app:errorEnabled="true">
+
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Address"
-                        android:inputType="text"
-                        android:background="@drawable/profile_text"
                         android:layout_marginLeft="33dp"
                         android:layout_marginRight="33dp"
-                        />
+                        android:background="@drawable/profile_text"
+                        android:hint="Address"
+                        android:inputType="text" />
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="90dp">
+                android:layout_marginBottom="90dp"
+                android:orientation="horizontal">
+
                 <android.widget.Button
                     android:layout_width="20dp"
-                    android:layout_weight="1"
                     android:layout_height="40dp"
-                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="33dp"
+                    android:layout_marginTop="20dp"
                     android:layout_marginRight="33dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_profile"
                     android:text="Size"
-                    android:textSize="15sp"
                     android:textColor="@color/white"
-                    android:background="@drawable/button_profile"/>
+                    android:textSize="15sp" />
+
                 <android.widget.Button
                     android:layout_width="20dp"
-                    android:layout_weight="1"
                     android:layout_height="40dp"
-                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="33dp"
+                    android:layout_marginTop="20dp"
                     android:layout_marginRight="33dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_profile"
                     android:text="Log Out"
-                    android:textSize="15sp"
                     android:textColor="@color/white"
-                    android:background="@drawable/button_profile"/>
+                    android:textSize="15sp" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
-    <com.google.android.material.bottomappbar.BottomAppBar
-        android:id="@+id/bottomAppBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        app:fabCradleMargin="10dp"
-        app:fabCradleRoundedCornerRadius="20dp"
-        app:fabCradleVerticalOffset="5dp">
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottomNavigationView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:menu="@menu/bottom_nav_menu"
-            android:layout_marginEnd="16dp"
-            android:background="@color/transparent" />
-
-
-    </com.google.android.material.bottomappbar.BottomAppBar>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        app:fabCustomSize="70dp"
-        app:maxImageSize="35dp"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_cart"
-        app:layout_anchor="@id/bottomAppBar"
-        app:backgroundTint="@color/purple_button" />
+    <include layout="@layout/navigation_button" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

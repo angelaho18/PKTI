@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import kotlinx.android.synthetic.main.activity_gallery_page.*
 import kotlinx.android.synthetic.main.content_scrolling.*
 import kotlinx.android.synthetic.main.gallery_item.*
+import kotlinx.android.synthetic.main.navigation_button.*
 
 class GalleryPage : AppCompatActivity() {
 
@@ -31,6 +32,9 @@ class GalleryPage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gallery_page)
+        bottomNavigationView.background = null
+        bottomNavigationView.menu.getItem(2).isEnabled = false
+
         setSupportActionBar(findViewById(R.id.toolbar))
         toolbar.setNavigationIcon(R.drawable.ic_arrow_back)
         toolbar.setNavigationOnClickListener(View.OnClickListener {

@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main_sign_up.*
 
 class MainActivitySignUp : AppCompatActivity() {
@@ -17,6 +18,10 @@ class MainActivitySignUp : AppCompatActivity() {
         signup.setOnClickListener {
             val intent_Signup = Intent(this, MainActivityRole::class.java)
             startActivity(intent_Signup)
+        }
+        findViewById<android.widget.Button>(R.id.google2).setOnClickListener { view ->
+            Snackbar.make(view, "Google Cannot Access", Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show()
         }
 
     }

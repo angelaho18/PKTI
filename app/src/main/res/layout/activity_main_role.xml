@@ -17,6 +17,7 @@
         android:textColor="@color/purple_200"
         />
     <android.widget.Button
+        android:id="@+id/desainer"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:layout_marginTop="50dp"
@@ -30,6 +31,7 @@
         android:background="@drawable/radius"
         />
     <android.widget.Button
+        android:id="@+id/customer"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:layout_marginTop="50dp"

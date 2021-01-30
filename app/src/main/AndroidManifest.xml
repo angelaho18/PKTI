@@ -31,7 +31,7 @@
             android:parentActivityName=".MainActivitySignUp"
             android:theme="@style/Theme.PKTI.NoActionBar" />
         <activity android:name=".MainActivitySearch" />
-        <activity android:name=".MainProfileActivity" />
+<!--        <activity android:name=".MainProfileActivity" />-->
         <activity android:name=".MainActivitySignIn" />
         <activity android:name=".MainActivityList" />
         <activity android:name=".MainActivityHome" />
@@ -42,7 +42,7 @@
         <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
         <!-- </intent-filter> -->
         <!-- </activity> -->
-        <activity android:name=".MainActivitySignUp">
+        <activity android:name=".MainProfileActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

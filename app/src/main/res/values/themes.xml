@@ -13,10 +13,6 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
         <item name="android:windowFullscreen">true</item>
-<<<<<<< HEAD
-<!--        <item name="android:windowContentOverlay">@null</item>-->
-=======
->>>>>>> 6bac05720274dbe0af20c4983378b5cd2aec9469
     </style>
 
     <style name="Theme.PKTI.NoActionBar">

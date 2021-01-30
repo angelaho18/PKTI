@@ -6,7 +6,7 @@ import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_gallery_page.*
 import kotlinx.android.synthetic.main.activity_main_cart.*
-import kotlinx.android.synthetic.main.activity_main_cart.previewBack
+//import kotlinx.android.synthetic.main.activity_main_cart.previewBack
 import kotlinx.android.synthetic.main.activity_product_preview.*
 
 class MainActivityCart : AppCompatActivity() {

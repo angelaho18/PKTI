@@ -42,6 +42,12 @@ class FeedAdapter (data : MutableList<Feed>) : RecyclerView.Adapter<FeedAdapter.
 
         Log.i("HOME", myData.get(position).gambar)
 
+        holder.itemView.setOnClickListener {
+            val konteks = holder.Pic.context
+            val intentproduk = Intent(konteks,ProductPreview::class.java)
+            konteks.startActivity(intentproduk)
+        }
+
     }
 
     override fun getItemCount(): Int = myData.size

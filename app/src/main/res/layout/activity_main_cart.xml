@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivityCart"
     android:background="@drawable/bg"
     android:orientation="vertical">
 
@@ -15,31 +14,14 @@
         android:orientation="horizontal"
         android:layout_marginTop="10dp">
 
-<<<<<<< HEAD
-=======
-        <ImageButton
-            android:id="@+id/previewBack"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/ic_arrow___left_3"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="25dp"/>
-
->>>>>>> 6bac05720274dbe0af20c4983378b5cd2aec9469
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="40sp"
             android:textStyle="bold"
             android:textColor="@color/purple_200"
-<<<<<<< HEAD
             android:gravity="center"
             android:text="Cart" />
-=======
-            android:text="Cart"
-            android:textAlignment="center"
-            android:layout_marginRight="30dp"/>
->>>>>>> 6bac05720274dbe0af20c4983378b5cd2aec9469
 
     </androidx.appcompat.widget.Toolbar>
 

@@ -48,7 +48,7 @@ class AdapterCart(data : MutableList<Produk>): RecyclerView.Adapter<AdapterCart.
                 .setMessage("Are you sure to remove this product from your cart?")
                 .setPositiveButton("YES, SURE", DialogInterface.OnClickListener { dialog, which ->
                     removeItem(index)
-                    Toast.makeText(itemView.context, "REMOVE", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(itemView.context, "Item Removed", Toast.LENGTH_SHORT).show()
                 })
                 .setNegativeButton("CANCEL", DialogInterface.OnClickListener { dialog, which ->
                     return@OnClickListener

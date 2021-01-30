@@ -45,6 +45,8 @@ class MainActivityCart : AppCompatActivity() {
         RecyclerViewCart.adapter=Myadapter
         RecyclerViewCart.layoutManager=LinearLayoutManager(this)
 
+
+
     }
 
 

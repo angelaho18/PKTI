@@ -33,6 +33,9 @@ class GalleryPage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gallery_page)
 
+        bottomNavigationView.background = null
+        bottomNavigationView.menu.getItem(2).isEnabled = false
+
         setSupportActionBar(findViewById(R.id.toolbar))
         toolbar.setNavigationIcon(R.drawable.ic_arrow_back)
         toolbar.setNavigationOnClickListener(View.OnClickListener {
@@ -59,6 +62,29 @@ class GalleryPage : AppCompatActivity() {
 //        findViewById<AppBarLayout>(R.id.app_bar).title = title
 
 //        var shader : BitmapShader = BitmapShader(bitmap, Shader.TileMode.CLAMP, Shader.TileMode.CLAMP)
+        bottomNavigationView?.selectedItemId = R.id.list
+
+        bottomNavigationView.setOnNavigationItemSelectedListener {
+            when (it.itemId) {
+                R.id.list ->{
+                    val intentlist = Intent(this,MainActivityList::class.java)
+                    startActivity(intentlist)
+                }
+                R.id.person -> {
+                    val intentperson = Intent(this, MainProfileActivity::class.java)
+                    startActivity(intentperson)
+                }
+                R.id.home1 -> {
+                    val intenthome = Intent(this, MainActivityHome::class.java)
+                    startActivity(intenthome)
+                }
+                R.id.map -> {
+                    val intentmap = Intent(this, MapsActivity::class.java)
+                    startActivity(intentmap)
+                }
+            }
+            true
+        }
     }
 
     private fun spanString(s: String, @IdRes tvId: Int) {
@@ -86,5 +112,8 @@ class GalleryPage : AppCompatActivity() {
         Gallery.add(Image("https://i.ibb.co/wc9rSgw/desserts.jpg", "Desserts Table"))
         Gallery.add(Image("https://i.ibb.co/wdrdpKC/kitten.jpg", "Kitten"))
     }
+
+
+
 
 }

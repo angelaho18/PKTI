@@ -14,6 +14,7 @@ import android.widget.*
 import androidx.cardview.widget.CardView
 import androidx.core.view.marginRight
 import com.bumptech.glide.Glide
+import com.google.android.material.snackbar.Snackbar
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_gallery_page.*
 import kotlinx.android.synthetic.main.activity_product_preview.*
@@ -74,6 +75,10 @@ class ProductPreview : AppCompatActivity() {
             card.addView(imagesView)
         }
 
+        customSizeBtn.setOnClickListener {
+            Snackbar.make(it, "Sorry, Custom Size is not Available now", Snackbar.LENGTH_SHORT)
+                .setAction("Action", null).show()
+        }
     }
 
     //convert dp to px

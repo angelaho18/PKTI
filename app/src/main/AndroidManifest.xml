@@ -4,17 +4,16 @@
     <!-- google -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <!--    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />-->
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher_busan"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher_busan_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PKTI">
-        <activity android:name=".ProductPreview"></activity>
+<!--        <activity android:name=".SplashScreen"></activity>-->
+        <activity android:name=".ProductPreview" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -28,31 +27,30 @@
             android:value="@string/google_maps_key" />
         <meta-data
             android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
-
-        <activity
-            android:name=".MapsActivity"
-            android:label="@string/title_activity_maps"
-            android:parentActivityName=".MainActivitySignUp" />
+            android:value="@integer/google_play_services_version" /> <!-- <activity -->
+        <!-- android:name=".MapsActivity" -->
+        <!-- android:label="@string/title_activity_maps" -->
+<!--         android:parentActivityName=".MainActivitySignUp" /> -->
         <activity
             android:name=".GalleryPage"
             android:label="@string/title_activity_gallery_page"
             android:parentActivityName=".MainActivitySignUp"
             android:theme="@style/Theme.PKTI.NoActionBar" />
         <activity android:name=".MainActivitySearch" />
-        <activity android:name=".MainProfileActivity" />
+<!--        <activity android:name=".MainProfileActivity" />-->
         <activity android:name=".MainActivitySignIn" />
-        <activity android:name=".MainActivityList" />
+        <activity android:name=".MainActivitySignUp" />
+<!--        <activity android:name=".MainActivityList" />-->
         <activity android:name=".MainActivityHome" />
-        <activity android:name=".MainActivityRole" />
-        <!-- <intent-filter> -->
+        <activity android:name=".MainActivityRole" /> <!-- <intent-filter> -->
         <!-- <action android:name="android.intent.action.MAIN" /> -->
         <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
         <!-- </intent-filter> -->
         <!-- </activity> -->
-        <activity android:name=".MainActivitySignUp">
+        <activity android:name=".MainActivityCart">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

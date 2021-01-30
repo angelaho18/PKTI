@@ -10,12 +10,12 @@
                     <corners android:radius="50px" />
                 </shape>
             </item>
-            <item android:left="25px">
-                <bitmap
-                    android:gravity="left"
-                    android:src="@drawable/google30"
-                    />
-            </item>
+<!--            <item android:left="25px">-->
+<!--                <bitmap-->
+<!--                    android:gravity="left"-->
+<!--                    android:src="@drawable/ic_google"-->
+<!--                    />-->
+<!--            </item>-->
         </layer-list>
     </item>
 </selector>

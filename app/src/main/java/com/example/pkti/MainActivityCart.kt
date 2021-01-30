@@ -9,9 +9,11 @@ import kotlinx.android.synthetic.main.activity_main_cart.*
 //import kotlinx.android.synthetic.main.activity_main_cart.previewBack
 import kotlinx.android.synthetic.main.activity_product_preview.*
 import kotlinx.android.synthetic.main.recyclerview_cart.*
+import kotlin.properties.Delegates
 
 class MainActivityCart : AppCompatActivity() {
     private lateinit var Myadapter : AdapterCart
+    var totalPrice: Int? = null
     private var ItemProduk : MutableList<Produk> = mutableListOf(
             Produk("Ani Shop", "Dress",200000,"https://i.ibb.co/wBYDxLq/beach.jpg"),
             Produk("Ani Shop","Dress",200000,"https://i.ibb.co/wBYDxLq/beach.jpg"),

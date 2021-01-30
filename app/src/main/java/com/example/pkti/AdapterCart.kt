@@ -18,6 +18,7 @@ import org.w3c.dom.Text
 
 class AdapterCart(data : MutableList<Produk>): RecyclerView.Adapter<AdapterCart.myHolder>() {
     private var myData = data
+    private var totalPrice: Int = 0
     inner class myHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         val GambarProduk = itemView.findViewById<ImageView>(R.id.GambarProduk)
         val NamaProduk = itemView.findViewById<TextView>(R.id.NamaProduk)
@@ -29,7 +30,7 @@ class AdapterCart(data : MutableList<Produk>): RecyclerView.Adapter<AdapterCart.
         val Total = itemView.findViewById<TextView>(R.id.totalPrice)
         val Delete = itemView.findViewById<ImageButton>(R.id.deleteItem)
 
-        fun bindTotal(item: Produk){
+        fun bindTotal(item: Produk): Int{
             var count = ItemCount.text.toString().toInt()
             var total = 0
             var price = 0
@@ -37,6 +38,7 @@ class AdapterCart(data : MutableList<Produk>): RecyclerView.Adapter<AdapterCart.
                 price  = i.Harga
                 total += (price * item.JumlahProduk)
             }
+            return total
 //            Toast.makeText(itemView.context, "count $count price $price total $total", Toast.LENGTH_LONG).show()
 //            Total.text = total.toString()
         }

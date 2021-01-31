@@ -5,9 +5,11 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.feed_item.view.*
@@ -22,6 +24,14 @@ class ListDesignerAdapter (data : MutableList<ListDesigner>) : RecyclerView.Adap
         val Pic2 = view.findViewById<ImageView>(R.id.ListGambar2)
         val Pic3 = view.findViewById<ImageView>(R.id.ListGambar3)
         val penampung = view.findViewById<LinearLayout>(R.id.penampung)
+        val Designer = view.findViewById<ImageButton>(R.id.seeDesigner)
+
+        fun bind(item: ListDesigner){
+            Designer.setOnClickListener {
+                val intentDesigner = Intent(view.context, GalleryPage::class.java)
+                startActivity(view.context, intentDesigner, null)
+            }
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListHolder {

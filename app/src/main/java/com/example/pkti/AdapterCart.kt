@@ -18,7 +18,6 @@ import org.w3c.dom.Text
 
 class AdapterCart(data : MutableList<Produk>): RecyclerView.Adapter<AdapterCart.myHolder>() {
     private var myData = data
-    private var totalPrice: Int = 0
     inner class myHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         val GambarProduk = itemView.findViewById<ImageView>(R.id.GambarProduk)
         val NamaProduk = itemView.findViewById<TextView>(R.id.NamaProduk)
@@ -27,7 +26,6 @@ class AdapterCart(data : MutableList<Produk>): RecyclerView.Adapter<AdapterCart.
         val Add = itemView.findViewById<android.widget.Button>(R.id.addList)
         val Remove = itemView.findViewById<android.widget.Button>(R.id.removeList)
         val ItemCount = itemView.findViewById<TextView>(R.id.itemCount)
-        val Total = itemView.findViewById<TextView>(R.id.totalPrice)
         val Delete = itemView.findViewById<ImageButton>(R.id.deleteItem)
 
         fun bindTotal(item: Produk): Int{
@@ -57,7 +55,8 @@ class AdapterCart(data : MutableList<Produk>): RecyclerView.Adapter<AdapterCart.
                 })
             Add.setOnClickListener {
                 count++
-                ItemCount.text = count.toString()
+                item.JumlahProduk = count
+                ItemCount.text = item.JumlahProduk.toString()
             }
             Remove.setOnClickListener() {
                 if(count == 1) {
@@ -65,8 +64,8 @@ class AdapterCart(data : MutableList<Produk>): RecyclerView.Adapter<AdapterCart.
                     return@setOnClickListener
                 }
                 count--
-                ItemCount.text = count.toString()
-                item.JumlahProduk = ItemCount.text.toString().toInt()
+                item.JumlahProduk = count
+                ItemCount.text = item.JumlahProduk.toString()
             }
             Delete.setOnClickListener {
                 dialog.show()
@@ -87,7 +86,7 @@ class AdapterCart(data : MutableList<Produk>): RecyclerView.Adapter<AdapterCart.
         holder.Harga.text = getPos.Harga.toString()
         Picasso.get().load(getPos.GambarProduk).into(holder.GambarProduk)
         holder.counter(getPos, position)
-        holder.bindTotal(getPos)
+//        holder.bindTotal(getPos)
     }
 
     override fun getItemCount(): Int = myData.size

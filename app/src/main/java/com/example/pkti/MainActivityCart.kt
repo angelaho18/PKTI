@@ -3,6 +3,7 @@ package com.example.pkti
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_gallery_page.*
 import kotlinx.android.synthetic.main.activity_main_cart.*
@@ -14,7 +15,7 @@ import kotlin.properties.Delegates
 
 class MainActivityCart : AppCompatActivity() {
     private lateinit var Myadapter : AdapterCart
-    var totalPrice: Int? = null
+    private var Total = 0
     private var ItemProduk : MutableList<Produk> = mutableListOf(
             Produk("Ani Shop", "Dress",200000,"https://i.ibb.co/wBYDxLq/beach.jpg"),
             Produk("Ani Shop","Dress",200000,"https://i.ibb.co/wBYDxLq/beach.jpg"),
@@ -45,9 +46,15 @@ class MainActivityCart : AppCompatActivity() {
         RecyclerViewCart.adapter=Myadapter
         RecyclerViewCart.layoutManager=LinearLayoutManager(this)
 
-
-
+        setTotal()
     }
 
+    fun setTotal(){
+        for (item in ItemProduk){
+            Total += (item.Harga * item.JumlahProduk)
+        }
+        totalPrice.text = "${Total}"
+        Toast.makeText(this, totalPrice.text, Toast.LENGTH_SHORT)
+    }
 
 }
